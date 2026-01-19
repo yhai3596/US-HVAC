@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- 标题 -->
+  <text x="300" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">
+    HVAC技术创新能力雷达图
+  </text>
+  <text x="300" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+    (评分范围: 0-10分)
+  </text>
+
+  <!-- 中心点 -->
+  <defs>
+    <!-- 渐变定义 -->
+    <radialGradient id="bgGradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- 背景圆圈 -->
+  <circle cx="300" cy="250" r="200" fill="url(#bgGradient)" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- 同心圆和网格线 -->
+  <g stroke="#dee2e6" stroke-width="1" fill="none">
+    <!-- 同心圆 -->
+    <circle cx="300" cy="250" r="160" opacity="0.5"/>
+    <circle cx="300" cy="250" r="120" opacity="0.5"/>
+    <circle cx="300" cy="250" r="80" opacity="0.5"/>
+    <circle cx="300" cy="250" r="40" opacity="0.5"/>
+
+    <!-- 网格线 (8个方向) -->
+    <line x1="300" y1="250" x2="300" y2="50"/>
+    <line x1="300" y1="250" x2="441.4" y2="108.6"/>
+    <line x1="300" y1="250" x2="500" y2="250"/>
+    <line x1="300" y1="250" x2="441.4" y2="391.4"/>
+    <line x1="300" y1="250" x2="300" y2="450"/>
+    <line x1="300" y1="250" x2="158.6" y2="391.4"/>
+    <line x1="300" y1="250" x2="100" y2="250"/>
+    <line x1="300" y1="250" x2="158.6" y2="108.6"/>
+  </g>
+
+  <!-- 刻度标签 -->
+  <g font-family="Arial" font-size="10" fill="#666">
+    <text x="300" y="35" text-anchor="middle">10</text>
+    <text x="300" y="75" text-anchor="middle">8</text>
+    <text x="300" y="115" text-anchor="middle">6</text>
+    <text x="300" y="155" text-anchor="middle">4</text>
+    <text x="300" y="195" text-anchor="middle">2</text>
+    <text x="300" y="235" text-anchor="middle">0</text>
+  </g>
+
+  <!-- 维度标签 -->
+  <g font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">
+    <!-- 产品创新 -->
+    <text x="300" y="35" text-anchor="middle">产品创新</text>
+    <!-- 智能技术 -->
+    <text x="455" y="100" text-anchor="middle">智能技术</text>
+    <!-- 节能环保 -->
+    <text x="515" y="255" text-anchor="middle">节能环保</text>
+    <!-- 质量控制 -->
+    <text x="455" y="410" text-anchor="middle">质量控制</text>
+    <!-- 客户服务 -->
+    <text x="300" y="475" text-anchor="middle">客户服务</text>
+    <!-- 成本控制 -->
+    <text x="145" y="410" text-anchor="middle">成本控制</text>
+    <!-- 渠道覆盖 -->
+    <text x="85" y="255" text-anchor="middle">渠道覆盖</text>
+    <!-- 品牌影响力 -->
+    <text x="145" y="100" text-anchor="middle">品牌影响力</text>
+  </g>
+
+  <!-- BOSCH数据 (橙色) -->
+  <polygon points="300,90 401.4,120 460,250 401.4,330 300,390 198.6,330 140,250 198.6,120"
+           fill="#f39c12" opacity="0.3" stroke="#f39c12" stroke-width="2"/>
+
+  <!-- Carrier数据 (蓝色) -->
+  <polygon points="300,130 381.4,150 460,250 381.4,310 300,350 218.6,310 140,250 218.6,150"
+           fill="#3498db" opacity="0.2" stroke="#3498db" stroke-width="2"/>
+
+  <!-- Trane数据 (绿色) -->
+  <polygon points="300,110 391.4,130 470,250 391.4,330 300,370 208.6,330 130,250 208.6,130"
+           fill="#2ecc71" opacity="0.2" stroke="#2ecc71" stroke-width="2"/>
+
+  <!-- 数据点 -->
+  <g>
+    <!-- BOSCH数据点 -->
+    <circle cx="300" cy="90" r="5" fill="#f39c12" stroke="white" stroke-width="2"/>
+    <circle cx="401.4" cy="120" r="5" fill="#f39c12" stroke="white" stroke-width="2"/>
+    <circle cx="460" cy="250" r="5" fill="#f39c12" stroke="white" stroke-width="2"/>
+    <circle cx="401.4" cy="330" r="5" fill="#f39c12" stroke="white" stroke-width="2"/>
+    <circle cx="300" cy="390" r="5" fill="#f39c12" stroke="white" stroke-width="2"/>
+    <circle cx="198.6" cy="330" r="5" fill="#f39c12" stroke="white" stroke-width="2"/>
+    <circle cx="140" cy="250" r="5" fill="#f39c12" stroke="white" stroke-width="2"/>
+    <circle cx="198.6" cy="120" r="5" fill="#f39c12" stroke="white" stroke-width="2"/>
+  </g>
+
+  <!-- 图例 -->
+  <g transform="translate(50, 450)">
+    <text x="0" y="0" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">图例:</text>
+
+    <polygon points="120,0 135,0 135,15 120,15" fill="#f39c12" opacity="0.5"/>
+    <text x="145" y="12" font-family="Arial" font-size="11" fill="#333">BOSCH (综合得分: 8.0)</text>
+
+    <polygon points="270,0 285,0 285,15 270,15" fill="#3498db" opacity="0.5"/>
+    <text x="295" y="12" font-family="Arial" font-size="11" fill="#333">Carrier (综合得分: 6.5)</text>
+
+    <polygon points="420,0 435,0 435,15 420,15" fill="#2ecc71" opacity="0.5"/>
+    <text x="445" y="12" font-family="Arial" font-size="11" fill="#333">Trane (综合得分: 7.0)</text>
+  </g>
+
+  <!-- 关键洞察 -->
+  <g transform="translate(50, 420)">
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#f39c12" font-weight="bold">⭐ 关键洞察:</text>
+    <text x="0" y="15" font-family="Arial" font-size="10" fill="#666">BOSCH在产品创新和智能技术方面表现突出</text>
+  </g>
+
+  <!-- 数据来源 -->
+  <text x="300" y="495" text-anchor="middle" font-family="Arial" font-size="10" fill="#7f8c8d">
+    数据来源: 行业分析报告, 2024 | 图表制作: HVAC首席商业分析师技能
+  </text>
+</svg>

@@ -1,0 +1,350 @@
+# HVAC首席商业分析师 - 数据源配置文件
+# 可动态增减数据源，修改优先级和启用状态
+
+data_sources:
+  # === 政府机构数据源 ===
+  - name: "DOE"
+    url: "https://www.energy.gov/"
+    priority: 1
+    enabled: true
+    description: "美国能源部 - 能效标准和政策"
+    category: "government"
+    update_frequency: "weekly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.energy.gov/eere/buildings/building-equipment-energy-efficiency"
+      - "https://www.energy.gov/eere/buildings/building-energy-codes"
+      - "https://www.energy.gov/eeere/building-america"
+
+  - name: "AHRI"
+    url: "https://www.ahrinet.org/"
+    priority: 1
+    enabled: true
+    description: "空调制冷协会 - 行业数据和认证"
+    category: "industry"
+    update_frequency: "monthly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.ahrinet.org/analytics"
+      - "https://www.ahrinet.org/certifications"
+      - "https://www.ahrinet.org/newsroom"
+
+  - name: "EPA"
+    url: "https://www.epa.gov/"
+    priority: 2
+    enabled: true
+    description: "环保署 - 环保政策和标准"
+    category: "government"
+    update_frequency: "monthly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.epa.gov/climate-change"
+      - "https://www.epa.gov/fgas"
+
+  - name: "ACCA"
+    url: "https://www.acca.org/"
+    priority: 2
+    enabled: true
+    description: "空调承包商协会 - 行业标准和培训"
+    category: "industry"
+    update_frequency: "monthly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.acca.org/standards"
+      - "https://www.acca.org/training"
+
+  - name: "CEE"
+    url: "https://www.energyefficiencyalliance.org/"
+    priority: 2
+    enabled: true
+    description: "能效联盟 - 能效标准和认证"
+    category: "industry"
+    update_frequency: "monthly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.cee1.org/commercial"
+      - "https://www.cee1.org/residential"
+
+  # === 品牌官方数据源 ===
+  - name: "Carrier"
+    url: "https://www.carrier.com/"
+    priority: 1
+    enabled: true
+    description: "Carrier官网 - 产品发布和技术文档"
+    category: "brand"
+    brand: "Carrier"
+    update_frequency: "weekly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.carrier.com/commercial/"
+      - "https://www.carrier.com/residential/"
+      - "https://www.carrier.com/newsroom/"
+      - "https://www.carrier.com/sustainability/"
+      - "https://investor.carrier.com/"
+
+  - name: "Trane"
+    url: "https://www.trane.com/"
+    priority: 1
+    enabled: true
+    description: "Trane官网 - 产品发布和技术文档"
+    category: "brand"
+    brand: "Trane"
+    update_frequency: "weekly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.trane.com/commercial/"
+      - "https://www.trane.com/residential/"
+      - "https://www.trane.com/news/"
+      - "https://www.trane.com/sustainability/"
+      - "https://investor.trane.com/"
+
+  - name: "BOSCH"
+    url: "https://www.bosch.com/"
+    priority: 1
+    enabled: true
+    description: "BOSCH官网 - 产品发布和技术文档（深度分析专用）"
+    category: "brand"
+    brand: "BOSCH"
+    update_frequency: "weekly"
+    last_checked: "2024-01-20T00:00:00"
+    special_analysis: true
+    bosch_priority: true
+    subdomains:
+      - "https://www.bosch.com/innovation-day/"
+      - "https://www.bosch.com/stories/"
+      - "https://www.bosch.com/media/"
+      - "https://www.bosch.com/research/"
+      - "https://www.bosch-presse.de/"
+      - "https://www.bosch.com/sustainability/"
+
+  - name: "Lennox"
+    url: "https://www.lennox.com/"
+    priority: 1
+    enabled: true
+    description: "Lennox官网 - 产品发布和技术文档"
+    category: "brand"
+    brand: "Lennox"
+    update_frequency: "weekly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.lennox.com/commercial/"
+      - "https://www.lennox.com/residential/"
+      - "https://www.lennox.com/about/newsroom/"
+      - "https://www.lennox.com/innovation/"
+      - "https://investor.lennox.com/"
+
+  - name: "Goodman"
+    url: "https://www.goodmanmfg.com/"
+    priority: 1
+    enabled: true
+    description: "Goodman官网 - 产品发布和技术文档"
+    category: "brand"
+    brand: "Goodman"
+    update_frequency: "weekly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.goodmanmfg.com/"
+      - "https://www.goodmanmfg.com/about/news/"
+      - "https://www.goodmanmfg.com/support/"
+      - "https://www.goodmanmfg.com/warranty/"
+
+  - name: "Daikin"
+    url: "https://www.daikin.com/"
+    priority: 1
+    enabled: true
+    description: "Daikin官网 - 产品发布和技术文档"
+    category: "brand"
+    brand: "Daikin"
+    update_frequency: "weekly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.daikin.com/about/innovation"
+      - "https://www.daikin.com/about/news"
+      - "https://www.daikin.com/about/sustainability"
+      - "https://investor.daikin.com/"
+
+  # === 政策法规数据源 ===
+  - name: "DSIRE"
+    url: "https://www.dsireusa.org/"
+    priority: 1
+    enabled: true
+    description: "DSIRE - 州级激励政策和退税信息"
+    category: "policy"
+    update_frequency: "monthly"
+    last_checked: "2024-01-20T00:00:00"
+    subdomains:
+      - "https://www.dsireusa.org/dbs/"
+
+  # === 行业新闻数据源 ===
+  - name: "ACHR_News"
+    url: "https://www.achrnews.com/"
+    priority: 3
+    enabled: true
+    description: "ACHR News - HVAC行业新闻"
+    category: "news"
+    update_frequency: "daily"
+    last_checked: "2024-01-20T00:00:00"
+
+  - name: "HVAC_Pusiness"
+    url: "https://www.hvacbusiness.com/"
+    priority: 3
+    enabled: true
+    description: "HVAC Business - 行业商业新闻"
+    category: "news"
+    update_frequency: "daily"
+    last_checked: "2024-01-20T00:00:00"
+
+  - name: "Contracting_Business"
+    url: "https://www.contractingbusiness.com/"
+    priority: 3
+    enabled: true
+    description: "Contracting Business - 承包商商业新闻"
+    category: "news"
+    update_frequency: "daily"
+    last_checked: "2024-01-20T00:00:00"
+
+  # === 财务和投资者数据源 ===
+  - name: "SEC_EDGAR"
+    url: "https://www.sec.gov/edgar/"
+    priority: 2
+    enabled: true
+    description: "SEC EDGAR - 上市公司财务报告"
+    category: "financial"
+    update_frequency: "quarterly"
+    last_checked: "2024-01-20T00:00:00"
+
+  # === 市场研究和行业报告 ===
+  - name: "IBISWorld"
+    url: "https://www.ibisworld.com/"
+    priority: 3
+    enabled: true
+    description: "IBISWorld - 市场研究报告"
+    category: "research"
+    update_frequency: "annually"
+    last_checked: "2024-01-20T00:00:00"
+
+  - name: "Grand_View_Research"
+    url: "https://www.grandviewresearch.com/"
+    priority: 3
+    enabled: true
+    description: "Grand View Research - 行业研究报告"
+    category: "research"
+    update_frequency: "annually"
+    last_checked: "2024-01-20T00:00:00"
+
+# === 区域数据源配置 ===
+regional_sources:
+  east_coast:
+    - name: "NYSERDA"
+      url: "https://www.nyserda.ny.gov/"
+      description: "纽约州能源研究与发展署"
+      enabled: true
+      priority: 1
+
+    - name: "MA_DPU"
+      url: "https://www.mass.gov/orgs/department-of-public-utilities"
+      description: "马萨诸塞州公用事业部"
+      enabled: true
+      priority: 1
+
+    - name: "NJ_BPU"
+      url: "https://www.bpu.nj.gov/"
+      description: "新泽西州公用事业部"
+      enabled: true
+      priority: 1
+
+    - name: "PA_DCED"
+      url: "https://dced.pa.gov/"
+      description: "宾夕法尼亚州社区经济发展部"
+      enabled: true
+      priority: 1
+
+  south_coast:
+    - name: "TX_Energy_Comission"
+      url: "https://www.texasgulf.org/energy/"
+      description: "德克萨斯州能源委员会"
+      enabled: true
+      priority: 1
+
+    - name: "FL_Enterprise"
+      url: "https://www.floridajobs.org/energy/"
+      description: "佛罗里达州能源办公室"
+      enabled: true
+      priority: 1
+
+    - name: "GA_Energy"
+      url: "https://energy.georgia.gov/"
+      description: "乔治亚州能源办公室"
+      enabled: true
+      priority: 1
+
+    - name: "NC_Energy"
+      url: "https://www.energy.gov/ukeerp/uk/energy/energy-renewable"
+      description: "北卡罗来纳州能源办公室"
+      enabled: true
+      priority: 1
+
+  west_coast:
+    - name: "CA_Energy_Comission"
+      url: "https://www.energy.ca.gov/"
+      description: "加州能源委员会"
+      enabled: true
+      priority: 1
+
+    - name: "WA_Energy"
+      url: "https://www.energy.wsu.edu/"
+      description: "华盛顿州能源办公室"
+      enabled: true
+      priority: 1
+
+    - name: "OR_Energy"
+      url: "https://www.oregon.gov/energy/"
+      description: "俄勒冈州能源办公室"
+      enabled: true
+      priority: 1
+
+# === 数据源权重配置 ===
+priority_weights:
+  government: 1.0    # 政府数据源权重最高
+  industry: 0.9      # 行业协会
+  brand: 0.8         # 品牌官网
+  policy: 0.8        # 政策数据
+  financial: 0.7     # 财务数据
+  news: 0.6          # 新闻
+  research: 0.5      # 研究报告
+  custom: 0.4        # 自定义
+
+# === 数据质量控制 ===
+data_quality:
+  min_confidence_score: 0.7
+  max_age_days: 90
+  duplicate_detection: true
+  sensitivity_filter: true
+  language_filter: ["en", "zh"]
+
+# === 特殊标记 ===
+special_marking:
+  bosch_priority_domains:
+    - "bosch.com"
+    - "bosch-presse.de"
+    - "bosch-innovation.de"
+
+  sensitive_keywords:
+    - "unreleased"
+    - "confidential"
+    - "internal"
+    - "未发布"
+    - "机密"
+    - "internal"
+
+  high_priority_keywords:
+    - "launch"
+    - "新品发布"
+    - "acquisition"
+    - "收购"
+    - "merger"
+    - "合并"
+    - "recall"
+    - "召回"
+    - "patent"
+    - "专利"
